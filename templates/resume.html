@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Category Prediction</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        input[type="file"] {
-            margin-bottom: 20px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .home-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Green background */
+        color: white;
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+    
+    .home-button:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input[type="file"] {
+        margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    ul li {
+        margin: 5px 0;
+    }
+    
+    hr {
+        margin: 20px 0;
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
+    
+    .container-dark {
+        background: #013a5c;
+        color: white;
+    }
     </style>
 </head>
 
 <body>
-    <div class="container" style="margin-top:20px;background:#013a5c;color:white;"">
+    <div class="container" style="margin-top:20px;background:Gray;color:white;">
 
-        <h1 class="text center">Resume Screening AI base System</h1>
+        <h1 class="text center">Resume Screening AI base System <a href="/" class="home-button">Home</a></h1>
         <p>This system supports TXT and PDF files, to be uploaded and it will work on the following....</p>
         <ul>
             <li>Resume Categorization</li>
@@ -65,8 +101,7 @@
 
 
     </div>
-    <div class="container" style="background:#013a5c;color:white;">
-
+    <div class="container" style="background:grey;color:white;">
         <h2>Upload Your Resume</h2>
         <form action="/pred" method="post" enctype="multipart/form-data">
             <input type="file" name="resume" accept=".pdf, .txt" required>
